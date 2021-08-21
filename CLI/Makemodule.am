@@ -1,0 +1,12 @@
+bin_PROGRAMS += _casmutils-cluster_finder
+
+_casmutils_cluster_finder_SOURCES=\
+         		                plugins/cluster_finder/CLI/CLI_make_periodic_orbits.cxx
+_casmutils_cluster_finder_LDADD=\
+					$(BOOST_REGEX_LIB)\
+					$(BOOST_SYSTEM_LIB)\
+					$(BOOST_PROGRAM_OPTIONS_LIB)\
+					$(BOOST_CHRONO_LIB)\ 
+                                        libcasmblob.la\
+					libcasmutils-clusterography.la\
+					libcasmutils.la
